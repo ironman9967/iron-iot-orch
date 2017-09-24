@@ -1,0 +1,22 @@
+{
+  "name": "iron-iot-orch",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+	  "build-docker": "docker-compose build",
+	  "start-docker": "docker-compose up -d",
+	  "stop-docker": "docker-compose down",
+
+	  "local": "npm run stop-docker && npm run build-docker && npm run start-docker"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ironman9967/iron-iot-orch.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ironman9967/iron-iot-orch/issues"
+  },
+  "homepage": "https://github.com/ironman9967/iron-iot-orch#readme"
+}
