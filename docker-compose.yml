@@ -1,0 +1,21 @@
+version: '2'
+services:
+  redis-device:
+    image: "redis"
+  redis-cloud:
+    image: "redis"
+  redis-data:
+    image: "redis"
+  data:
+    build: ../iron-iot-data/
+    ports:
+      - "8081:8081"
+    depends_on:
+      - redis-data
+  cloud:
+    build: ../iron-iot-cloud/
+    ports:
+      - "8080:8080"
+    depends_on:
+      - redis-cloud
+      - data
