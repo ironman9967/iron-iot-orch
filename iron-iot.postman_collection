@@ -1,0 +1,65 @@
+{
+	"variables": [],
+	"info": {
+		"name": "iron-iot",
+		"_postman_id": "3b12a3e9-0217-dda3-06bc-cce63af2aaf2",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "local register service",
+			"request": {
+				"url": "http://localhost:8080/api/services/register",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"iron-iot-device\",\n\t\"route\": \"device\",\n\t\"version\": \"v0.0.1\",\n\t\"connection\": {\n\t\t\"host\": \"device\",\n\t\t\"port\": \"8081\"\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "local get services",
+			"request": {
+				"url": "http://localhost:8080/api/services",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"iron-iot-device\",\n\t\"route\": \"device\",\n\t\"version\": \"v0.0.1\",\n\t\"connection\": {\n\t\t\"host\": \"localhost\",\n\t\t\"port\": \"8081\"\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "local get devices",
+			"request": {
+				"url": "http://localhost:8080/api/device/data",
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept-version",
+						"value": "application/iron-iot.device-v0.0.1+json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"iron-iot-device\",\n\t\"route\": \"device\",\n\t\"version\": \"v0.0.1\",\n\t\"connection\": {\n\t\t\"host\": \"localhost\",\n\t\t\"port\": \"8081\"\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
